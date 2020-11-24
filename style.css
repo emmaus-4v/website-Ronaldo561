@@ -3,7 +3,7 @@
 html, body {
     height: 100%;
     padding: 0;
-    background-color: #EEEEEE;  
+    background-color: rgb(255, 255, 255);  
     
     color: #303030;
     font: Verdana, Arial, Sans-Serif;
@@ -19,11 +19,12 @@ main {
 
 article {
     text-align: justify;
+    clear:both;
 }
 
 
 header {
-    color: skyblue;
+    color: rgb(179,0,0);
     text-align: center;
 }
 
@@ -33,15 +34,79 @@ footer {
     padding-bottom: 10px;
 }
 
+/* slide-animaties */
+@keyframes slide-links {
+    0% {
+        left:-1000px;
+    
+    }
+    100% {
+        left:0px;
+    }  
+    
+}
+
+@keyframes slide-rechts {
+    0% {
+        right:-1000px;
+    
+    }
+    100% {
+        right:0px;
+    }  
+    
+}
+
+.slide-kort-links {
+    position: relative;
+    animation: slide-links 5s;
+}
+
+.slide-medium-links {
+    position: relative;
+    animation: slide-links 10s;
+}
+
+.slide-lang-links {
+    position: relative;
+    animation: slide-links 15s;
+}
+
+.slide-kort-rechts {
+    position: relative;
+    animation: slide-rechts 5s;
+}
+
+.slide-medium-rechts { 
+    position: relative;
+    animation: slide-rechts 10s;
+}
+
+.slide-lang-rechts {
+    position: relative;
+    animation: slide-rechts 15s;
+}
 
 /* specifieke stijlen */
 
-img.zweefLinks {
-    float: right;
+img.zweefmidden {
     margin-right: 150px;
-    margin-left: 150px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    width: 500px;
 }
-
+img.zweeflinks {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 450px;
+}
+img.zweefrechts {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 450px;
+}
 .smalltext {
     font-size: 0.7em;
 }
@@ -55,18 +120,25 @@ a:hover {
     text-decoration: underline;
 }
 
+h3 {
+    color:rgb(179,0,0);
+}
+
+
 
 /* navigatiebalk */
 nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: #dddddd;
+    background-color: rgb(153, 0, 0);
     overflow: hidden;
 }
 
 nav ul li {
     float: left;
+    width:140px;
+    height:46px;
 }
 
 nav li a {
@@ -78,11 +150,11 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #aaaaaa;
+    background-color: rgb(204, 0, 0);
 }
 
 nav li a.active {
-    background-color: skyblue;
+    background-color:rgb(179, 0, 0);
 }
 
 
