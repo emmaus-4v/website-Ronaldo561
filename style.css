@@ -105,11 +105,27 @@ footer {
     color:rgb(179, 0, 0);
 }
 }
+@keyframes link-kleur-verandering {
+    0% {
+        color: rgb(255, 0, 0);
+    }
+    25% {
+        color: rgb(0, 0, 153);
+    }
+    50% {
+        color: rgb(0, 153, 0);
+    }
+    75% {
+        color: rgb(153, 0, 153);
+    }
+    100% {
+        color: rgb(255, 0, 0);
+    }
+}
 
 .kleur-animatie {
     animation: kleur-verandering 15s infinite
 }
-
 
 /* specifieke stijlen */
 
@@ -135,8 +151,8 @@ img.zweefrechts {
     font-size: 0.7em;
 }
 
-a {
-    color: skyblue;
+a.hyperlink {
+    animation: link-kleur-verandering 10s infinite;
     text-decoration: none;
 }
 
