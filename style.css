@@ -147,9 +147,7 @@ img.zweefrechts {
     margin-bottom: 10px;
     width: 450px;
 }
-.smalltext {
-    font-size: 0.7em;
-}
+
 
 a.hyperlink {
     animation: link-kleur-verandering 10s infinite;
