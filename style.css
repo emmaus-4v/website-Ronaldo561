@@ -1,14 +1,11 @@
 /* Basislayout */
-
 html, body {
     height: 100%;
     padding: 0;
-    background-color: rgb(255, 255, 255);  
-    
+    background-color: rgb(179, 107, 0);  
     color: #303030;
-    font: Verdana, Arial, Sans-Serif;
+    font-family: "Raleway", sans-serif
 }
-
 
 main {
     margin: 0 auto;
@@ -16,25 +13,26 @@ main {
     position: relative;
 }
 
-
 article {
     text-align: justify;
     clear:both;
 }
-
 
 header {
     color: rgb(179,0,0);
     text-align: center;
 }
 
-
 footer {
     text-align: center;
     padding-bottom: 10px;
 }
+/* Rode lijn aan de onderkant van elke pagina */
+hr {
+    border: 3px dashed rgb(155, 11, 11);
+}
 
-/* slide-animaties */
+/* slide animaties */
 @keyframes slide-links {
     0% {
         left:-1000px;
@@ -62,19 +60,9 @@ footer {
     animation: slide-links 5s;
 }
 
-.slide-medium-links {
-    position: relative;
-    animation: slide-links 10s;
-}
-
 .slide-lang-links {
     position: relative;
     animation: slide-links 15s;
-}
-
-.slide-kort-rechts {
-    position: relative;
-    animation: slide-rechts 5s;
 }
 
 .slide-medium-rechts { 
@@ -87,7 +75,7 @@ footer {
     animation: slide-rechts 15s;
 }
 
-/* kleur-amimaties */
+/* kleurverandering voor de titels animatie */
 @keyframes kleur-verandering {
 0% {
     color:rgb(179, 0, 0);
@@ -105,6 +93,8 @@ footer {
     color:rgb(179, 0, 0);
 }
 }
+
+/* kleurverandering voor de hyperlinks animatie */
 @keyframes link-kleur-verandering {
     0% {
         color: rgb(255, 0, 0);
@@ -127,8 +117,17 @@ footer {
     animation: kleur-verandering 15s infinite
 }
 
-/* specifieke stijlen */
+/* hyperlinks kleuren, animaties en decoratie */
+.hyperlink {
+    animation: link-kleur-verandering 10s infinite;
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* specifieke stijlen */
 img.zweefmidden {
     margin-right: 150px;
     margin-left: 100px;
@@ -147,15 +146,10 @@ img.zweefrechts {
     margin-bottom: 10px;
     width: 450px;
 }
-
-
-a.hyperlink {
-    animation: link-kleur-verandering 10s infinite;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+.border-afbeelding {
+    border-style: solid;
+    border-color: rgb(204, 0, 0);
+    border-width: 10px;
 }
 
 /* navigatiebalk */
@@ -188,7 +182,3 @@ nav li a:hover {
 nav li a.active {
     background-color:rgb(179, 0, 0);
 }
-
-
-
-
